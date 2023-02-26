@@ -1,0 +1,22 @@
+
+a {
+    text-decoration: none;
+}
+.main-container {
+    background-color: aliceblue;
+    width: 960px;
+    height: 960px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;  
+}
+.canvas-blank{   
+    width: 58px;
+    height: 58px;
+    border: 1px solid black;
+    
+}
+.canvas-blank:hover { 
+    background-color: yellow;
+}
