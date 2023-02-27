@@ -1,8 +1,8 @@
 
 const container = document.querySelector('#container');
 
-function displayDivs(){
-    const grid = 16;
+function displayDivs(grid){
+
     let j=0;
     while(j<grid){
         for (i=0; i<grid; i++){
@@ -12,8 +12,14 @@ function displayDivs(){
             container.appendChild(canvas);        
         }
         j++;
-    }    
+    }       
 }
-displayDivs();
+displayDivs(16);
 
+let divFiller = document.querySelectorAll('.canvas-blank');
 
+for (let k=0; k<divFiller.length; k++){
+    divFiller[k].addEventListener('mouseover', function(e){
+        this.setAttribute("class", "canvas-blank-fill");
+    })
+}

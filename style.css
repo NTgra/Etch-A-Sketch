@@ -2,7 +2,7 @@
 a {
     text-decoration: none;
 }
-.main-container {
+.canvas-container {
     background-color: aliceblue;
     width: 960px;
     height: 960px;
@@ -11,12 +11,13 @@ a {
     flex-wrap: wrap;
     padding: 0;  
 }
-.canvas-blank{   
+.canvas-blank, .{   
     width: 58px;
     height: 58px;
     border: 1px solid black;
     
 }
-.canvas-blank:hover { 
-    background-color: yellow;
+
+.canvas-blank-fill{
+    background-color: black;
 }
