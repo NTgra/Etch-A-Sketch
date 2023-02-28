@@ -3,12 +3,16 @@ function clearBox(elementID)
 {
     document.getElementById(elementID).innerHTML = "";
 }
+
+
 const wrapper = document.querySelector('#wrapper');
 function displayDivs(grid){
     const container = document.querySelector('#container');
-    
+    const randomColor = "#"+((1<<24)*Math.random()|0).toString(16);
+
     let divWidth=(640/grid);
     console.log(divWidth)
+    console.log(randomColor)
     
     let j=0;
     while(j<grid){
@@ -17,7 +21,8 @@ function displayDivs(grid){
             canvas.classList.add('canvas-blank');
             canvas.style.width=divWidth+"px";
             canvas.style.height=divWidth+"px";
-            // add here the Math.random for RGB colors
+            
+            
             container.appendChild(canvas);              
         }
         j++;
@@ -31,7 +36,11 @@ function displayDivs(grid){
 
   for (let k=0; k<divFiller.length; k++){
       divFiller[k].addEventListener('mouseover', function(e){
-          this.setAttribute("class", "canvas-blank-fill");
+        
+
+        document.documentElement.style.setProperty('--random-fill-color', randomColor);
+         this.setAttribute("class", "canvas-blank-fill");
+        
       })
   }      
 }
